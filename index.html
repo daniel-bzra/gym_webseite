@@ -1,30 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gym</title>
     <link rel="stylesheet" href="styles/main.css">
-    <html lang="de"></html>
 </head>
 <body>
     <header>
-        <img src="images/logo.png" alt="">
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Übungen</a></li>
-                <li><a href="#">Tipps/tricks</a></li> #nickolas hat einen rechtschreiberfehler gefunden
-                <li><a href="#">Gym's in der Schweiz</a></li>
-                <li><a href="#">Hilfsmittel</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown"><a href="#">Übungen</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Abs</a></li>
+                        <li><a href="#">Arm</a></li>
+                        <li><a href="#">Back</a></li>
+                        <li><a href="#">Chest</a></li>
+                        <li><a href="#">Legs</a></li>
+                        <li><a href="#">Shoulder</a></li>
+                    </ul>
+                </li>
+                <li><a href="pages/Tipp.html">Tipps/tricks</a></li>
+                <li><a href="pages/Gym_Schweiz.html">Gym's in der Schweiz</a></li>
+                <li><a href="pages/hilfsmittel.html">Hilfsmittel</a></li>
             </ul>
+             <img class="sticky" src="images/logo.png" alt="logo">
         </nav>
     </header>
     <main>
+        <section>
+        <h1>News</h1>
+            <div class="eins">
+            <img src="images/glücklich_man.jpg" alt="Glücklicher Mann im Fitnessstudio">
+            <h2>Hyrox sorgt in Cardiff für einen Fitness-Boom mit Tausenden Teilnehmern</h2>
+            <h5>
+            <p>
+            In Cardiff findet erstmals das Fitness-Racing-Event Hyrox statt, 
+            bei dem Zehntausende erwartet werden. 
+            Die dreitägige Veranstaltung im Principality Stadium ist Teil eines weltweiten Trends
+            mit über 200.000 Teilnehmenden. 
+            Das fordernde Rennen besteht aus acht 1-km-Läufen und verschiedenen Fitnessübungen – auch der älteste bekannte Teilnehmer wird dabei sein.
+            </p>
+            </h5>
+        </div>
 
+        <div class="zwei">
+            <img src="images/BBC Clive Seabrook standing in a gym inside the Link Centre. He is wearing a light blue collared shirt underneath a navy polo jumper. Behind him is a mirror reflecting the gym equipment and weights on the other side.jpg" alt="Clive Seabrook im Fitnessstudio des Link Centre">
+            <h2>Zentrum für Freizeit und Sport feiert 40 Jahre im Dienst der Gemeinschaft</h2>
+            <h5>
+                <p>
+Mitarbeitende und Mitglieder des Fitnessstudios feiern 40 Jahre seit der Eröffnung eines wichtigen Treffpunkts für die Gemeinschaft.
+Das Link Centre in Swindon, das ein Fitnessstudio, ein Schwimmbad und eine Eislaufhalle umfasst, öffnete erstmals 1985 seine Türen und gehört zu den größten Freizeitzentren in Wiltshire.
+Am 26. April ist eine besondere Veranstaltung geplant, um dieses Jubiläum zu feiern – mit Verkaufsständen und vergünstigten Angeboten wie Eislaufen, Schwimmen und Trampolinspringen.
+Geschäftsleiter Clive Seabrook bezeichnete die Einrichtung als „das Herzstück von West-Swindon“ und ergänzte: „Es ist ein wirklich wichtiger Ort für die Gemeinschaft.“
+                </p>
+            </h5>
+        </div>
+
+        <div class="drei">
+            <img src="images/four men.jpg" alt="Vier Männer im Fitnessstudio">
+            <h2>Kostenlose Gym-Mitgliedschaften für Parkinson-Betroffene zur Unterstützung von Gesundheit und Bewegung</h2>
+            <h5>
+                <p>
+Das Bromsgrove Sport- und Freizeitzentrum bietet Menschen mit Parkinson kostenlose Mitgliedschaften an.
+Das Programm wurde gemeinsam mit Parkinson’s UK entwickelt und umfasst freien Zugang zu Fitnessstudio, 
+Schwimmbad, Gruppenkursen und Online-Tanzkursen. 
+Auch bis zu drei Betreuungspersonen können kostenlos teilnehmen.
+                </p>
+            </h5>
+        </div>
+        </section>
     </main>
     <footer>
-
+    nickolas hat tippfehler gefunden
     </footer>
+    <script>
+    window.addEventListener("scroll", function() {
+    const header = document.querySelector("header");
+    header.classList.toggle("sticky", window.scrollY > 50);
+    });
+</script>
+
 </body>
 </html>

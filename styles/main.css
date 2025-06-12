@@ -1,31 +1,56 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     border: 0;
-    font-family: 'Times New Roman', Times, serif;
-    scroll-behavior: smooth;
 }
 header{
     flex-grow: 1;
 }
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: margin 0.2s, padding 0.2s;
+}
 header > nav{
     display: flex;
     flex-direction: row;
-    margin-top: 30px;
+    align-items: center;
+    justify-content: space-between; 
+    margin-top: 0;
     padding-left: 20px;
+    padding-right: 20px; 
     color: white;
     background-color: #094277;
+    margin: 10px auto 10px auto;
+    border-radius: 18px;
+    transition: margin 0.2s, padding 0.2s;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
 header > nav > ul{
     display: flex;
+    flex: 1;
+    justify-content: space-between; 
     list-style: none;
-    font-size: large;
-    padding: 30px;
+    font-size: 22px;
+    padding: 20px;
+    transition: padding 0.2s;
 }
 header > nav > ul > li{
-    margin: 10px 0;
-    padding: 10px;
+    margin: 5px 0;
+    padding: 8px 16px;
+    flex: 1;
+    text-align: center; 
 }
 a{
     text-decoration: none;
@@ -35,22 +60,134 @@ a:hover{
     color: #fcd200;
     font-weight: bold;
 }
-main{
+
+header.sticky img {
+    display: none;
+
+}
+header.sticky {
+    margin: 0 0 4px 0;
+    padding-top: 0;
+    padding-bottom: 0;
+
+}
+header.sticky > nav {
+    margin: 2px auto 2px auto;
+    padding-left: 8px;
+    padding-right: 8px;
+    opacity: 0.5;
+}
+header.sticky > nav > ul {
+    padding: 8px;
+}
+
+
+main {
     display: flex;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
-    flex-grow: 1;
     flex-direction: column;
-    margin-bottom: 30px;
+    gap: 30px;
+    padding: 40px 30px;
+    background: linear-gradient(135deg, #eaf6ff 0%, #cbe0f7 100%);
+    box-shadow: 0 4px 24px rgba(9, 66, 119, 0.08);
+    margin: 40px auto 40px auto;
+    border-radius: 18px;
+    max-width: 900px;
+    min-height: 400px;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
 }
-footer > ul{
-   display: flex;
-   flex-direction: column;
-   margin-left: 20px;
-   list-style: none;
+
+main > section {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 24px 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(9, 66, 119, 0.06);
 }
+
+main > section > div {
+    margin-bottom: 0;
+    color:white;
+    background: #094277;
+    padding: 16px 14px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    box-shadow: 0 1px 4px rgba(9, 66, 119, 0.04);
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+main > section > h1 {
+    color: #094277;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+h5 {
+  font-size: 14px;
+}
+main img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(9, 66, 119, 0.04);
+}
+main section .eins p {
+  margin-top: 20px;
+}
+main section .zwei p {
+  margin-top: 20px;
+}
+main section .drei p {
+  margin-top: 20px;
+}
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #094285;
+  border-radius: 8px;
+  min-width: 160px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  z-index: 200;
+  flex-direction: column;
+  list-style: none;
+}
+
+.dropdown-content li {
+  padding: 10px 16px;
+  text-align: left;
+}
+
+.dropdown-content li a {
+  color: white;
+  display: block;
+}
+
+.dropdown-content li a:hover {
+    color: #fcd200;
+    font-weight: bold;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+
+footer > ul {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    list-style: none;
+}
+
 foooter {
     background-color: #094277;
     background-color: white;
