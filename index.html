@@ -13,12 +13,12 @@
                 <li><a href="index.html">Home</a></li>
                 <li class="dropdown"><a href="#">Übungen</a>
                     <ul class="dropdown-content">
-                        <li><a href="#">Abs</a></li>
-                        <li><a href="#">Arm</a></li>
-                        <li><a href="#">Back</a></li>
-                        <li><a href="#">Chest</a></li>
-                        <li><a href="#">Legs</a></li>
-                        <li><a href="#">Shoulder</a></li>
+                        <li><a href="/pages/übungen/abs.html">Abs</a></li>
+                        <li><a href="/pages/übungen/Arm.html">Arm</a></li>
+                        <li><a href="/pages/übungen/back.html">Back</a></li>
+                        <li><a href="/pages/übungen/chest.html">Chest</a></li>
+                        <li><a href="/pages/übungen/legs.html">Legs</a></li>
+                        <li><a href="/pages/übungen/shoulder.html">Shoulder</a></li>
                     </ul>
                 </li>
                 <li><a href="pages/Tipp.html">Tipps/tricks</a></li>
@@ -46,7 +46,7 @@
         </div>
 
         <div class="zwei">
-            <img src="images/BBC Clive Seabrook standing in a gym inside the Link Centre. He is wearing a light blue collared shirt underneath a navy polo jumper. Behind him is a mirror reflecting the gym equipment and weights on the other side.jpg" alt="Clive Seabrook im Fitnessstudio des Link Centre">
+            <img src="images/BBC Clive Seabrook standing in a gym.jpg" alt="Clive Seabrook im Fitnessstudio des Link Centre">
             <h2>Zentrum für Freizeit und Sport feiert 40 Jahre im Dienst der Gemeinschaft</h2>
             <h5>
                 <p>
@@ -77,8 +77,9 @@ Auch bis zu drei Betreuungspersonen können kostenlos teilnehmen.
     </footer>
     <script>
     window.addEventListener("scroll", function() {
-    const header = document.querySelector("header");
-    header.classList.toggle("sticky", window.scrollY > 50);
+        const header = document.querySelector("header");
+        console.log(window.scrollY);
+        header.classList.toggle("sticky", window.scrollY > 50);
     });
 </script>
 
