@@ -129,6 +129,7 @@ main {
     min-height: 400px;
     box-sizing: border-box;
     overflow-wrap: break-word;
+    text-align: center;
 }
 main > p {
     margin-top: 20px;
