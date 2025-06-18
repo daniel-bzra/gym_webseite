@@ -7,28 +7,119 @@
     <link rel="stylesheet" href="../styles/pages.css">
 </head>
 <body>
-    <header>
-        <nav>
+   <header>
+    <nav>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Übungen</a>
+          <ul class="dropdown-content">
+            <li><a href="/pages/übungen/abs.html">Abs</a></li>
+            <li><a href="/pages/übungen/Arm.html">Arm</a></li>
+            <li><a href="/pages/übungen/back.html">Back</a></li>
+            <li><a href="/pages/übungen/chest.html">Chest</a></li>
+            <li><a href="/pages/übungen/legs.html">Legs</a></li>
+            <li><a href="/pages/übungen/shoulder.html">Shoulder</a></li>
+          </ul>
+        </li>
+        <li><a href="/pages/Tipp.html">Tipps/tricks</a></li>
+        <li><a href="/pages/Gym_Schweiz.html">Gym's in der Schweiz</a></li>
+        <li><a href="/pages/hilfsmittel.html">Hilfsmittel</a></li>
+      </ul>
+      <img class="sticky" src="/images/logo.png" alt="logo" />
+    </nav>
+    <section>
+        <button id="menu-toggle" aria-label="Menü öffnen">☰</button>
+        <nav id="nav-menu">
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li class="dropdown"><a href="#">Übungen</a>
+                <li><a href="/index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Übungen</a>
                     <ul class="dropdown-content">
-                        <li><a href="./übungen/abs.html">Abs</a></li>
-                        <li><a href="./übungen/abs.html">Arm</a></li>
-                        <li><a href="./übungen/abs.html">Back</a></li>
-                        <li><a href="./übungen/abs.html">Chest</a></li>
-                        <li><a href="./übungen/abs.html">Legs</a></li>
-                        <li><a href="./übungen/abs.html">Shoulder</a></li>
+                        <li><a href="/pages/übungen/abs.html">Abs</a></li>
+                        <li><a href="/pages/übungen/Arm.html">Arm</a></li>
+                        <li><a href="/pages/übungen/back.html">Back</a></li>
+                        <li><a href="/pages/übungen/chest.html">Chest</a></li>
+                        <li><a href="/pages/übungen/legs.html">Legs</a></li>
+                        <li><a href="/pages/übungen/shoulder.html">Shoulder</a></li>
                     </ul>
                 </li>
                 <li><a href="/pages/Tipp.html">Tipps/tricks</a></li>
                 <li><a href="/pages/Gym_Schweiz.html">Gym's in der Schweiz</a></li>
                 <li><a href="/pages/hilfsmittel.html">Hilfsmittel</a></li>
             </ul>
-             <img class="sticky" src="../images/logo.png" alt="logo">
         </nav>
-    </header>
-    <main></main>
-    <footer></footer>
+    </section>
+  </header>
+    <main>
+  
+   <h1>Ernährung – Tipps für Fitness und Gesundheit</h1>
+
+  <h3>1. Weniger verarbeitete Lebensmittel essen</h3>
+  <pre>Vermeide Fertigprodukte mit Zucker und Chemikalien. Koche dein Essen selbst,
+   um die Nährstoffe besser zu kontrollieren</pre>
+
+  <h3>2. Mehr Protein konsumieren</h3>
+  <pre><strong>2g Protein pro kg Körpergewicht</strong> täglich
+  Gute Quellen: <strong>Fleisch, Eier, Bohnen, Hülsenfrüchte</strong></pre>
+
+  <h3>3. Gemüse und Früchte essen</h3>
+  <pre>Reich an <strong>Vitaminen und Mineralstoffen</strong>
+  Essenziell für die tägliche Gesundheit</pre>
+
+  <h3>4. Zuckerkonsum stark reduzieren</h3>
+  <pre>Maximal <strong>50g Zucker pro Tag</strong> Beispiel: Eine halbe Cola = ca. 27g Zucker
+  Zuckerhaltige Getränke stillen nicht den Durst</pre>
+
+  <h3>5. Weniger süße Getränke trinken</h3>
+  <pre>Bevorzuge Wasser oder ungesüßten Tee Softdrinks vermeiden.</pre>
+
+  <h3>6. Genügend Wasser trinken</h3>
+  <pre><strong>Mindestens 2 Liter Wasser pro Tag</strong> Unterstützt Stoffwechsel und Energie</pre>
+  <br>
+
+  <h1>Creatin</h1> 
+
+  <h3>1. Dosierung</h3>
+  <pre>Ca. <strong>1g Creatin pro 10kg Körpergewicht pro Tag</strong></pre>
+
+  <h3>2. Einnahme</h3>
+  <pre>In <strong>Wasser auflösen</strong> und <strong>einmal täglich regelmäßig einnehmen</strong></pre>
+
+  <h3>3. Zeitpunkt der Einnahme</h3>
+  <pre><strong>Kurz vor dem Training</strong> ist optimal <strong>Creatin ist kein Energy Boost</strong> – es braucht Zeit, bis es wirkt</pre>
+
+  <h3>4. Wirkung</h3>
+  <pre>Unterstützt <strong>Muskelaufbau und Kraftsteigerung</strong> Funktioniert nur bei <strong>täglicher Anwendung</strong></pre>
+
+
+
+    <script>
+        const toggleBtn = document.getElementById("menu-toggle");
+    const navList = document.querySelector("#nav-menu > ul");
+
+    toggleBtn.addEventListener("click", () => {
+        let isShown = navList.classList.contains("show");
+
+        if (isShown)  {
+            navList.classList.remove("show");
+            navList.classList.add("hide");            
+        }
+        else {
+            navList.classList.add("show");
+            navList.classList.remove("hide");
+        }
+
+      toggleBtn.textContent = navList.classList.contains("show") ? "𐤕" : "☰";
+    });
+    window.addEventListener("scroll", function() {
+    const header = document.querySelector("header");
+    header.classList.toggle("sticky", window.scrollY > 50);
+    });
+    </script>
+    </main>
+    <footer>
+       
+    </footer>
 </body>
 </html>

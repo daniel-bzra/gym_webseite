@@ -7,49 +7,95 @@
     <link rel="stylesheet" href="/styles/übungen.css">
 </head>
 <body>
-    <header>
-        <nav>
+      <header>
+    <nav>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Übungen</a>
+          <ul class="dropdown-content">
+            <li><a href="/pages/übungen/abs.html">Abs</a></li>
+            <li><a href="/pages/übungen/Arm.html">Arm</a></li>
+            <li><a href="/pages/übungen/back.html">Back</a></li>
+            <li><a href="/pages/übungen/chest.html">Chest</a></li>
+            <li><a href="/pages/übungen/legs.html">Legs</a></li>
+            <li><a href="/pages/übungen/shoulder.html">Shoulder</a></li>
+          </ul>
+        </li>
+        <li><a href="pages/Tipp.html">Tipps/tricks</a></li>
+        <li><a href="pages/Gym_Schweiz.html">Gym's in der Schweiz</a></li>
+        <li><a href="pages/hilfsmittel.html">Hilfsmittel</a></li>
+      </ul>
+      <img class="sticky" src="/images/logo.png" alt="logo" />
+    </nav>
+    <section>
+        <button id="menu-toggle" aria-label="Menü öffnen">☰</button>
+        <nav id="nav-menu">
             <ul>
                 <li><a href="/index.html">Home</a></li>
-                <li class="dropdown"><a href="#">Übungen</a>
+                <li class="dropdown">
+                    <a href="#">Übungen</a>
                     <ul class="dropdown-content">
-                        <li><a href="abs.html">Abs</a></li>
-                        <li><a href="Arm.html">Arm</a></li>
-                        <li><a href="back.html">Back</a></li>
-                        <li><a href="chest.html">Chest</a></li>
-                        <li><a href="legs.html">Legs</a></li>
-                        <li><a href="shoulder.html">Shoulder</a></li>
+                        <li><a href="/pages/übungen/abs.html">Abs</a></li>
+                        <li><a href="/pages/übungen/Arm.html">Arm</a></li>
+                        <li><a href="/pages/übungen/back.html">Back</a></li>
+                        <li><a href="/pages/übungen/chest.html">Chest</a></li>
+                        <li><a href="/pages/übungen/legs.html">Legs</a></li>
+                        <li><a href="/pages/übungen/shoulder.html">Shoulder</a></li>
                     </ul>
                 </li>
                 <li><a href="/pages/Tipp.html">Tipps/tricks</a></li>
                 <li><a href="/pages/Gym_Schweiz.html">Gym's in der Schweiz</a></li>
                 <li><a href="/pages/hilfsmittel.html">Hilfsmittel</a></li>
             </ul>
-             <img class="sticky" src="/images/logo.png" alt="logo">
         </nav>
-    </header>
+    </section>
+  </header>
     <main>
          <h1>Legs</h1>
         <p>
-            <img class="img-row" src="#" alt="#">
-            <img class="img-row" src="#" alt="#"> 
+            <img src="/images/Legpress_down.jpg" alt="Legpress_down">
+            <img src="/images/Legpress_up.jpg" alt="Legpress_up"> 
             <strong>Legs:</strong> Leg Press
         </p>
         <p>
-            <img src="#" alt="#">
-            <img src="#" alt="#">
+            <img src="/images/calf_down.jpg" alt="calf_down">
+            <img src="/images/calf_up.jpg" alt="calf_up">
             <strong>Legs:</strong> Calf Raises
         </p>
         <p>
-            <img src="#" alt="#">
-            <img src="#" alt="#">
+            <img src="/images/Legcurl_down.jpg" alt="Legcurl_down">
+            <img src="/images/Legcurl_top.jpg" alt="Legcurl_top">
             <strong>Legs:</strong> Leg Curls
         </p>
         <p>
-            <img src="#" alt="#">
-            <img src="#" alt="#">
+            <img src="/images/Legextension_down.jpg" alt="Legextension_down">
+            <img src="/images/Legextension_up.jpg" alt="Legextension_up">
             <strong>Legs:</strong> Leg Extension
         </p>
+        <script>
+            const toggleBtn = document.getElementById("menu-toggle");
+    const navList = document.querySelector("#nav-menu > ul");
+
+    toggleBtn.addEventListener("click", () => {
+        let isShown = navList.classList.contains("show");
+
+        if (isShown)  {
+            navList.classList.remove("show");
+            navList.classList.add("hide");            
+        }
+        else {
+            navList.classList.add("show");
+            navList.classList.remove("hide");
+        }
+
+      toggleBtn.textContent = navList.classList.contains("show") ? "𐤕" : "☰";
+    });
+        window.addEventListener("scroll", function() {
+        const header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 50);
+        });
+        </script>
     </main>
     <footer></footer>
 </body>
